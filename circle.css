@@ -1,6 +1,7 @@
 #circle {
-    animation: dropDown 4s linear infinite;
-    animation-delay: calc(var(--order) * 500ms);
+    animation: dropDown 6s linear infinite;
+    animation-delay: calc(var(--order) * 1200ms);
+    transform-origin: center;
     opacity: 0;
 }
 
@@ -16,37 +17,37 @@ svg{
 
     0% {
         opacity: 1;
-        translate: 20%;
+        translate: 0;
         /*opacity: 1;*/
     }
     20% {
         translate: 20% 20%;
-        scale: .5;
+        scale: .8;
         /*opacity: .7;*/
     }
 
     40%{
-        scale: 1;
-        translate: 20% 40%;
+        scale: .6;
+        translate: 0 40%;
         /*opacity: .6;*/
     }
 
     60%{
         translate: 20% 60%;
-        scale: .5;
-        /*opacity: .4;*/
+        scale: .4;
+        opacity: 0;
     }
 
     80%{
-        translate: 20% 70%;
-        scale: 1;
+        translate: 0 70%;
+        scale: .2;
         /*opacity: .2;*/
     }
 
     100%{
-        scale: .5;
+        scale: 0;
         translate: 20% 80%;
-        opacity: 0;
+
     }
 
 }

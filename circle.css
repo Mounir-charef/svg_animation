@@ -4,13 +4,16 @@
     transform-origin: center;
     opacity: 0;
 }
-
+path{
+    stroke: #646464;
+    stroke-width: 1;
+}
 svg{
     position: absolute;
     top: 0;
     left: 2%;
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
 }
 
 @keyframes dropDown {

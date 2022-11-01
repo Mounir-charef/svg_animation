@@ -8,9 +8,9 @@
 svg{
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 250px;
-    height: 250px;
+    left: 2%;
+    width: 120px;
+    height: 120px;
 }
 
 @keyframes dropDown {

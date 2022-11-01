@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="My Page Description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <title>Svg button</title>
+</head>
+<body>
+
+
+<svg width="30" height="38" viewBox="0 0 30 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="triangles" clip-path="url(#clip0_1_2)">
+        <g id="lightGroup">
+            <path id="light 1" d="M23.8978 17.9541C24.8925 18.5406 24.8793 19.9839 23.8741 20.5521L5.77983 30.7794C4.7746 31.3476 3.53125 30.6145 3.54181 29.4598L3.73183 8.67608C3.74238 7.52142 4.99893 6.81119 5.99361 7.39766L23.8978 17.9541Z"/>
+        </g>
+        <g id="darkGroup">
+            <path id="dark 2" d="M23.8798 17.9541C24.8745 18.5406 24.8613 19.9839 23.856 20.5521L5.76178 30.7794C4.75655 31.3476 3.5132 30.6145 3.52375 29.4598L3.71377 8.67608C3.72433 7.52142 4.98088 6.81119 5.97556 7.39766L23.8798 17.9541Z"/>
+            <path id="dark 1" d="M27.8978 17.9541C28.8925 18.5406 28.8793 19.9839 27.8741 20.5521L9.77983 30.7794C8.7746 31.3476 7.53125 30.6145 7.54181 29.4598L7.73183 8.67608C7.74238 7.52142 8.99893 6.81119 9.99361 7.39766L27.8978 17.9541Z"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="clip0_1_2">
+            <rect width="30" height="38" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>
+
+<script>
+    const newColor = () =>
+        `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+    const svg = document.getElementById("triangles");
+    svg.onclick = () => {
+        document.documentElement.style.cssText = `
+        --dark-color: ${newColor()};
+        --light-color: ${newColor()};
+        `
+    }
+</script>
+
+
+</body>
+</html>

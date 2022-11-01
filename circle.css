@@ -1,6 +1,7 @@
 #circle {
     animation: dropDown 4s linear infinite;
-    animation-delay: calc(var(--order) * 200ms);
+    animation-delay: calc(var(--order) * 500ms);
+    opacity: 0;
 }
 
 svg{
@@ -14,31 +15,32 @@ svg{
 @keyframes dropDown {
 
     0% {
-        translate: 0;
         opacity: 1;
+        translate: 20%;
+        /*opacity: 1;*/
     }
     20% {
-        translate: 0 20%;
+        translate: 20% 20%;
         scale: .5;
-        opacity: .7;
+        /*opacity: .7;*/
     }
 
     40%{
         scale: 1;
         translate: 20% 40%;
-        opacity: .6;
+        /*opacity: .6;*/
     }
 
     60%{
         translate: 20% 60%;
         scale: .5;
-        opacity: .4;
+        /*opacity: .4;*/
     }
 
     80%{
         translate: 20% 70%;
         scale: 1;
-        opacity: .2;
+        /*opacity: .2;*/
     }
 
     100%{
@@ -47,4 +49,17 @@ svg{
         opacity: 0;
     }
 
+}
+body {
+    background: #3f2e2e;
+    font-family: sans-serif;
+}
+
+body::before {
+    content: "SHUUUUUUUSH";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 10rem;
 }

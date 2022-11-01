@@ -1,0 +1,50 @@
+#circle {
+    animation: dropDown 4s linear infinite;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+@keyframes dropDown {
+
+    0% {
+        translate: 0;
+        opacity: 1;
+    }
+    20% {
+        translate: 0 20%;
+        scale: .5;
+        opacity: .7;
+    }
+
+    40%{
+        scale: 1;
+        translate: 20% 40%;
+        opacity: .6;
+    }
+
+    60%{
+        translate: 20% 60%;
+        scale: .5;
+        opacity: .4;
+    }
+
+    80%{
+        translate: 20% 70%;
+        scale: 1;
+        opacity: .2;
+    }
+
+    100%{
+        scale: .5;
+        translate: 20% 80%;
+        opacity: 0;
+    }
+
+}

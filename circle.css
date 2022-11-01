@@ -1,17 +1,33 @@
-#circle {
-    animation: dropDown 6s linear infinite;
-    animation-delay: calc(var(--order) * 1200ms);
+#circle1 {
+    animation: dropDown 4s linear infinite;
+    animation-delay: calc(var(--order) * 800ms);
     transform-origin: center;
     opacity: 0;
 }
+
+#circle2 {
+    translate: 0 -20%;
+    animation: dropDown2 6s linear infinite;
+    animation-delay: calc(var(--order) * 800ms);
+    transform-origin: center;
+    opacity: 0;
+}
+
 path{
     stroke: #646464;
     stroke-width: 1;
 }
-svg{
+#c1 {
     position: absolute;
     top: 0;
-    left: 2%;
+    left: 3%;
+    width: 150px;
+    height: 150px;
+}
+#c2 {
+    position: absolute;
+    top: 0;
+    left: -3.5%;
     width: 200px;
     height: 200px;
 }
@@ -19,24 +35,30 @@ svg{
 @keyframes dropDown {
 
     0% {
-        opacity: 1;
+        opacity: 0;
         translate: 0;
         /*opacity: 1;*/
     }
+
+    10%{
+        opacity: .5;
+        translate: 10% 5%;
+    }
+
     20% {
-        translate: 20% 20%;
+        translate: 20% 10%;
         scale: .8;
         /*opacity: .7;*/
     }
 
     40%{
         scale: .6;
-        translate: 0 40%;
+        translate: 0 30%;
         /*opacity: .6;*/
     }
 
     60%{
-        translate: 20% 60%;
+        translate: 20% 50%;
         scale: .4;
         opacity: 0;
     }
@@ -54,8 +76,56 @@ svg{
     }
 
 }
+
+
+@keyframes dropDown2 {
+
+    0% {
+        opacity: 0;
+        translate: 0;
+        /*opacity: 1;*/
+    }
+
+    10%{
+        opacity: .5;
+        translate: 10% 5%;
+    }
+
+    20% {
+        translate: 20% 10%;
+        scale: .8;
+        /*opacity: .7;*/
+    }
+
+    40%{
+        scale: .6;
+        translate: 0 30%;
+        /*opacity: .6;*/
+    }
+
+    60%{
+        translate: 20% 50%;
+        scale: .4;
+        opacity: 0;
+    }
+
+    80%{
+        translate: 0 70%;
+        scale: .2;
+        /*opacity: .2;*/
+    }
+
+    100%{
+        scale: 0;
+        translate: 20% 80%;
+
+    }
+
+}
+
+
 body {
-    background: #3f2e2e;
+    background: #18202c;
     font-family: sans-serif;
 }
 
